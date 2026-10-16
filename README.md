@@ -30,7 +30,7 @@ Because the graph is rebuilt every turn, its nodes change as you move from room 
 You need Docker and a Gemini API key. Copy the `.env.example` file at the root of the repo to `.env` and paste your API key:
 
 ```
-GEMINI_API_KEY=sk-...
+GEMINI_API_KEY=your-gemini-api-key
 GEMINI_MODEL=gemini-3.8-flash # optional; this is the default
 ```
 
@@ -46,7 +46,7 @@ The web app and the API both reload when you edit their source files. After you 
 
 While it's running you can also look inside the databases:
 
-- **Neo4j Browser:** http://localhost:7474, user `neo4j`, password set from your .env folder
+- **Neo4j Browser:** http://localhost:7474, user `neo4j`, password set from your .env file
 - **KurrentDB UI:** http://localhost:2113
 
 Docker Compose is for development only. There's no production build.
