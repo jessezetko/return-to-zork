@@ -1,7 +1,7 @@
-import { ChatOpenAI } from '@langchain/openai'
+import { ChatGoogleGenerativeAI } from '@langchain/google-genai'
 import { BaseChatModel } from '@langchain/core/language_models/chat_models'
 
-import { OPENAI_API_KEY, OPENAI_MODEL } from '@src/env.js'
+import { GEMINI_API_KEY, GEMINI_MODEL } from '@src/env.js'
 
 let llmClient: BaseChatModel | null = null
 
@@ -11,10 +11,10 @@ export async function fetchLLMClient(): Promise<BaseChatModel> {
 }
 
 function createLLMClient(): BaseChatModel {
-  if (!OPENAI_API_KEY) throw new Error('OPENAI_API_KEY environment variable is required')
+  if (!GEMINI_API_KEY) throw new Error('GEMINI_API_KEY environment variable is required')
 
-  return new ChatOpenAI({
-    model: OPENAI_MODEL,
-    apiKey: OPENAI_API_KEY
+  return new ChatGoogleGenerativeAI({
+    model: GEMINI_MODEL,
+    apiKey: GEMINI_API_KEY
   })
 }

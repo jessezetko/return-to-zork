@@ -1,6 +1,6 @@
 import dedent from 'dedent'
 
-import { fetchLLMClient } from '@accessors/openai/llm-client.js'
+import { fetchLLMClient } from '@src/accessors/google-genai/llm-client.js'
 import { GameTurnAnnotation, FinalNarrativeSchema, type EntityChange, type FinalNarrative } from '../game-turn-state.js'
 import type { Entity } from '@domain/entities/entity.js'
 import type { Game } from '@domain/game/game.js'

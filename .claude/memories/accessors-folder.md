@@ -1,6 +1,6 @@
 ---
 name: External dependencies live in accessors/
-description: Code that talks to anything outside the app (Neo4j, KurrentDB, OpenAI, world files) goes in api/src/accessors/; only domain classes call it, services go through the domain
+description: Code that talks to anything outside the app (Neo4j, KurrentDB, Gemini, world files) goes in api/src/accessors/; only domain classes call it, services go through the domain
 metadata:
   type: project
 ---
