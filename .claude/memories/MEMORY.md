@@ -2,7 +2,7 @@
 - [Turn log lives in KurrentDB](turn-log-kurrentdb.md) — one stream per game; the game graph stays in Neo4j; deleting a game must clear both
 - [Workflow context in factories](workflow-context-in-factories.md) — nodes capture the Game via factories and fetch nearby entities when they run; graph state holds only per-turn data
 - [Worlds are files](worlds-as-files.md) — authored worlds load from worlds/ into memory at startup; World is the domain class; "game graph" not "world graph"
-- [External dependencies live in accessors/](accessors-folder.md) — Neo4j, KurrentDB, Gemini, world files under api/src/accessors/; services reach them only through domain classes
+- [External dependencies live in accessors/](accessors-folder.md) — Neo4j, KurrentDB, Gemini (google-genai), world files under api/src/accessors/; services reach them only through domain classes
 - [API endpoints](api-endpoints.md) — agreed /api surface; player names each game; no game log or version endpoints
 - [Docker is dev-only](dev-only-docker.md) — single-stage Dockerfiles running npm run dev; no prod builds, no tsc compile step
 - [Agents see links as properties](agents-see-links-as-properties.md) — player roomId and door leadsTo in entity JSON, no instanceId; the arbiter alone moves the player
