@@ -1,4 +1,4 @@
-import { fetchLLMClient } from '@accessors/openai/llm-client.js'
+import { fetchLLMClient } from '@src/accessors/google-genai/llm-client.js'
 import {
   GameTurnAnnotation,
   EntityChangeRecommendationSchema,

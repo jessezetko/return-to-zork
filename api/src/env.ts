@@ -8,5 +8,5 @@ export const KURRENTDB_URI = process.env.KURRENTDB_URI ?? 'kurrentdb://localhost
 export const WORLD_DIR = process.env.WORLD_DIR ?? '../worlds'
 export const RECENT_TURN_COUNT = Number(process.env.RECENT_TURN_COUNT ?? 3)
 
-export const OPENAI_API_KEY = process.env.OPENAI_API_KEY
-export const OPENAI_MODEL = process.env.OPENAI_MODEL ?? 'gpt-6-luna'
+export const GEMINI_API_KEY = process.env.GEMINI_API_KEY
+export const GEMINI_MODEL = process.env.GEMINI_MODEL ?? 'gemini-3.8-flash'

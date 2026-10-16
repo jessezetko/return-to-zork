@@ -20,18 +20,19 @@ Because the graph is rebuilt every turn, its nodes change as you move from room 
 | Part | Built with | Does |
 | --- | --- | --- |
 | `web/` | Svelte 5, Vite | The game UI |
-| `api/` | Express, LangGraph.js, OpenAI | The REST API and the agent workflow |
+| `api/` | Express, LangGraph.js, Gemini | The REST API and the agent workflow |
 | Neo4j | | Each game's live state: rooms, fixtures, doors, and the player |
 | KurrentDB | | Each game's turn log, one stream per game |
 | `worlds/` | JSON files | The worlds a new game can be started from |
 
 ## Running it
 
-You need Docker and an OpenAI API key. Put the key in a `.env` file at the root of the repo:
+You need Docker and a Gemini API key. Copy the `.env.example` file at the root of the repo to `.env` and paste your API key and Neo4j password:
 
 ```
-OPENAI_API_KEY=sk-...
-OPENAI_MODEL=gpt-6-luna   # optional; this is the default
+GEMINI_API_KEY=your-gemini-api-key
+NEO4J_PASSWORD=choose-a-password
+GEMINI_MODEL=gemini-3.8-flash # optional; this is the default
 ```
 
 Then start everything:
@@ -46,7 +47,7 @@ The web app and the API both reload when you edit their source files. After you 
 
 While it's running you can also look inside the databases:
 
-- **Neo4j Browser:** http://localhost:7474, user `neo4j`, password `password`
+- **Neo4j Browser:** http://localhost:7474, user `neo4j`, password set from your .env file
 - **KurrentDB UI:** http://localhost:2113
 
 Docker Compose is for development only. There's no production build.
