@@ -27,10 +27,11 @@ Because the graph is rebuilt every turn, its nodes change as you move from room 
 
 ## Running it
 
-You need Docker and a Gemini API key. Copy the `.env.example` file at the root of the repo to `.env` and paste your API key:
+You need Docker and a Gemini API key. Copy the `.env.example` file at the root of the repo to `.env` and paste your API key and Neo4j password:
 
 ```
 GEMINI_API_KEY=your-gemini-api-key
+NEO4J_PASSWORD=choose-a-password
 GEMINI_MODEL=gemini-3.8-flash # optional; this is the default
 ```
 
